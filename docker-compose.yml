@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  oracle-test:
+    image: store/oracle/database-enterprise:12.2.0.1
+    container_name: oracle-test
+    restart: always
+    environment:
+      - ORACLE_SID=ORCLCDB
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=admin
+    ports:
+      - "1521:1521"
+    volumes:
+      - ./sample-data:/docker-entrypoint-initdb.d
