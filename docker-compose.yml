@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   oracle-test:
-    image: store/oracle/database-enterprise:12.2.0.1
+    image: oraclelinux:8.8
     container_name: oracle-test
     restart: always
     environment:
